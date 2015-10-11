@@ -20,7 +20,6 @@ namespace LoginExample.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
-        public virtual DbSet<Friendship> Friendships { get; set; }
         public virtual DbSet<Platform> Platforms { get; set; }
         public virtual DbSet<Category> Catagories { get; set; }
     }
@@ -38,7 +37,6 @@ namespace LoginExample.Models
         public bool IsEmailMarketingAllowed { get; set; }
         public string StripeEmail { get; set; }
         public int StripeID { get; set; }
-        public virtual List<Friendship> Friendships { get; set; }
     }
 
     public class Employee
@@ -91,7 +89,8 @@ namespace LoginExample.Models
     {
         public int Id { get; set; }
         public virtual Game Game { get; set; }
-        public virtual Member Member { get; set; }
+        public virtual Member Author { get; set; }
+        public virtual Member Aprover { get; set; }
         public float Rating { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }
@@ -100,8 +99,8 @@ namespace LoginExample.Models
     public class Friendship
     {
         [Key]
+        public int Id { get; set; }
         public virtual Member Friendee { get; set; }
-        [Key]
         public virtual Member Friender { get; set; }
         public bool IsFamilyMember { get; set; }
         public bool IsAccepted { get; set; }
