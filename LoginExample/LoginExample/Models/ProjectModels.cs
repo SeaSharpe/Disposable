@@ -20,6 +20,7 @@ namespace LoginExample.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<Friendship> Friendships { get; set; }
         public virtual DbSet<Platform> Platforms { get; set; }
         public virtual DbSet<Category> Catagories { get; set; }
     }
@@ -90,7 +91,7 @@ namespace LoginExample.Models
         public int Id { get; set; }
         public virtual Game Game { get; set; }
         public virtual Member Author { get; set; }
-        public virtual Member Aprover { get; set; }
+        public virtual Employee Aprover { get; set; }
         public float Rating { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LoginExample.Models.Member">
+    <Position X="0.75" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEEAAAAAAgACAAAAAAAgAAAAQAgAAAAAAgAAACAg=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginExample.Models.Address">
+    <Position X="4.75" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAIIAAAAAAAAAIIAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Order">
+    <Position X="4.75" Y="13.75" Width="2.75" />
+    <AssociationLine Name="BillingAddress" Type="LoginExample.Models.Address" FixedFromPoint="true">
+      <Path>
+        <Point X="5.375" Y="13.75" />
+        <Point X="5.375" Y="12.565" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ShippingAddress" Type="LoginExample.Models.Address" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="13.75" />
+        <Point X="7.25" Y="12.565" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAUAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BillingAddress" />
+      <Property Name="ShippingAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.OrderItem">
+    <Position X="5.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAACAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Game">
+    <Position X="0.5" Y="4.75" Width="3.25" />
+    <AssociationLine Name="Reviews" Type="LoginExample.Models.Review" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.688" />
+        <Point X="5.5" Y="5.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAIAAAAAAAAAAQAABAAEAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Platform" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Reviews" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Review">
+    <Position X="5.5" Y="5.5" Width="2.25" />
+    <AssociationLine Name="Author" Type="LoginExample.Models.Member" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.625" Y="7.18" />
+        <Point X="6.625" Y="9.938" />
+        <Point X="3.25" Y="9.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAQAAgIABAAAAAAgAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Game" />
+      <Property Name="Author" />
+      <Property Name="Aprover" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Friendship">
+    <Position X="0.75" Y="13.75" Width="2.5" />
+    <AssociationLine Name="Friendee" Type="LoginExample.Models.Member" FixedFromPoint="true">
+      <Path>
+        <Point X="1.375" Y="13.75" />
+        <Point X="1.375" Y="12.776" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Friendee" />
+      <Property Name="Friender" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Platform">
+    <Position X="0.5" Y="8" Width="3" />
+    <AssociationLine Name="Games" Type="LoginExample.Models.Game" FixedFromPoint="true">
+      <Path>
+        <Point X="2.375" Y="8" />
+        <Point X="2.375" Y="6.623" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Games" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Category">
+    <Position X="0.5" Y="1.5" Width="3.25" />
+    <AssociationLine Name="Games" Type="LoginExample.Models.Game" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="2.796" />
+        <Point X="1.25" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Games" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LoginExample.Models.Employee">
+    <Position X="5.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\ProjectModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
