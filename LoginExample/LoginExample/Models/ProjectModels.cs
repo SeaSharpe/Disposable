@@ -3,9 +3,7 @@ namespace LoginExample.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity;
-    using System.Linq;
 
     public class ProjectModels : DbContext
     {
